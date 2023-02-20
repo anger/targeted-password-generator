@@ -1,14 +1,14 @@
 print("""
-Password Wordlist Generator
+Targeted Password Generator
 
-Answer all questions to the best of your ability, those you do not know, press enter. Date of birth is a necessary input.
+Please answer all questions provided the best you can. If you do not know the answer, or are unsure, please press enter. DOB is a required input.
 """)
 
 list = []
 names = []
 temp_names = []
 phoneNumber = ''
-dateOfBirth = input("Date of birth(DDMMYYYY):")
+dateOfBirth = input("Enter Birthday (DDMMYYYY):")
 if (len(dateOfBirth) == 8):
     day = dateOfBirth[:2]
     month = dateOfBirth[2:4]
