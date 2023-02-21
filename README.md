@@ -1,7 +1,4 @@
-# Personalized Password List Generator
-
-Create a targeted password wordlist with patterns and known information.
-
+# Targeted Password Generator
 ## Information
 
 On social media, people frequently disclose too much information, including their birthday, phone number, and place of birth. These numerous small nuggets of information can pile up. Passwords can be reliably inferred automatically from data like:
