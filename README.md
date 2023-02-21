@@ -6,14 +6,14 @@ Create a targeted password wordlist with patterns and known information.
 
 On social media, people frequently disclose too much information, including their birthday, phone number, and place of birth. These numerous small nuggets of information can pile up. Passwords can be reliably inferred automatically from data like:
 
-* Their own name or a family member's or friend's name
-* Their pet’s name
-* Their birthday or that of a close relative
-* Words related to their hobbies or interests
-* Geographic information
 * The titles of their favorite books or films
 * Names of idols or notable people
 * The name of the website for which the password is intended.
+* Their own name or a family member's or friend's name
+* Their birthday or that of a close relative
+* Words related to their hobbies or interests
+* Geographic information
+* Their pet’s name
 
 This tool automatically generates a lengthy wordlist of potential passwords using the supplied data, which may then be used in a legitimate penetration test or forensic investigation to crack any potential passwords.
 
