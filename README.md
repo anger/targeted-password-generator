@@ -2,10 +2,9 @@
 
 Create a targeted password wordlist with patterns and known information.
 
-## Info
+## Information
 
-People often share too much on social media, whether it be their birthday, phone number, or area of birth. All of these little pieces of
-Information can add up. We can reasonably deduce passwords automatically from information such as:
+On social media, people frequently disclose too much information, including their birthday, phone number, and place of birth. These numerous small nuggets of information can pile up. Passwords can be reliably inferred automatically from data like:
 
 * Their own name or a family member's or friend's name
 * Their pet’s name
@@ -16,26 +15,19 @@ Information can add up. We can reasonably deduce passwords automatically from in
 * Names of idols or notable people
 * The name of the website for which the password is intended.
 
-This program automatically uses the information provided to create a long wordlist of potential passwords that can be used
-in an authorized penetration test or forensic investigation to crack any potential passwords.
+This tool automatically generates a lengthy wordlist of potential passwords using the supplied data, which may then be used in a legitimate penetration test or forensic investigation to crack any potential passwords.
 
-The creator of this program is in no way responsible for any illegal activity that results from its use.
-authorizes or promotes illegal activity with this program.
+This program's inventor is not in any way liable for any unlawful action that arises as a result of its use, nor does it support or encourage such behaviour.
 
-### How to Use
+### Usage
 
-Make sure to have Python version 3+.
+Be sure to use Python version 3 or higher.
 
-No outside packages are required to run this project.
+Running this project doesn't require any additional packages.
 
-Run the program with:
+Start the software using:
 
-> $python app.py
+> $python main.py
 
-The password list will be generated in the same folder as the application; it will be titled "output.txt"
+The password list will be created and saved as "output.txt" in the same folder as the application.
 
-### Requirements
-
-Python 3
-
-No internet connection is required after installing the application.

@@ -14,10 +14,10 @@ if (len(dob) == 8):
     month = dob[2:4]
     year = dob[4:]
 else:
-    print("ERROR: Wrong format detected for dob, please enter 8 numbers in the format of DDMMYYYY")
+    print("ERROR OCCURED: Wrong format detected for birthday, please enter 8 numbers in DDMMYYYY format")
     exit()
 
-phone_number = input("Enter phone no:")
+phone_number = input("Enter phone number:")
 
 
 def imp_info():
@@ -26,7 +26,7 @@ def imp_info():
     names.append(input("Nickname:\n"))
     names.append(input("Significant other/Best Friend name:\n"))
     names.append(input("Significant other/Best Friend Nickname:\n"))
-    names.append(input("Pets name:\n"))
+    names.append(input("Pet's name:\n"))
     names.append(input("Company name:\n"))
     names.append(input("Child's name:\n"))
     names.append(input("Child's nickname:\n"))
@@ -87,3 +87,4 @@ for i in names:
 names = names + temp_names
 make_list(list)
 make_file(list)
+print("output.txt has been created")
