@@ -1,4 +1,4 @@
-print("""
+print("""inp
 Targeted Password Generator
 
 Please answer all questions provided the best you can. If you do not know the answer, or are unsure, please press enter. DOB is a required input.
@@ -7,74 +7,62 @@ Please answer all questions provided the best you can. If you do not know the an
 list = []
 names = []
 temp_names = []
-phoneNumber = ''
-dateOfBirth = input("Enter Birthday (DDMMYYYY):")
-if (len(dateOfBirth) == 8):
-    day = dateOfBirth[:2]
-    month = dateOfBirth[2:4]
-    year = dateOfBirth[4:]
+phone_number = ''
+dob = input("Enter Birthday (DDMMYYYY):")
+if (len(dob) == 8):
+    day = dob[:2]
+    month = dob[2:4]
+    year = dob[4:]
 else:
-    print("ERROR: Wrong format detected for dateOfBirth, please enter 8 numbers in the format of DDMMYYYY")
+    print("ERROR: Wrong format detected for dob, please enter 8 numbers in the format of DDMMYYYY")
     exit()
 
-phoneNumber = input("Enter phone no:")
+phone_number = input("Enter phone no:")
 
 
-def importantWords():
-    names.append(input("First name:"))
-    print("\n")
-    names.append(input("Last name:"))
-    print("\n")
-    names.append(input("Nickname:"))
-    print("\n")
-    names.append(input("Significant other/Best Friend name:"))
-    print("\n")
-    names.append(input("Significant other/Best Friend Nickname:"))
-    print("\n")
-    names.append(input("Pets name:"))
-    print("\n")
-    names.append(input("Company name:"))
-    print("\n")
-    names.append(input("Child's name:"))
-    print("\n")
-    names.append(input("Child's nickname:"))
-    print("\n")
-    names.append(input("City:"))
-    print("\n")
-    names.append(input("Country:"))
-    print("\n")
-    names.append(input("Favourite color:"))
-    print("\n")
+def imp_info():
+    names.append(input("First name:\n"))
+    names.append(input("Last name:\n"))
+    names.append(input("Nickname:\n"))
+    names.append(input("Significant other/Best Friend name:\n"))
+    names.append(input("Significant other/Best Friend Nickname:\n"))
+    names.append(input("Pets name:\n"))
+    names.append(input("Company name:\n"))
+    names.append(input("Child's name:\n"))
+    names.append(input("Child's nickname:\n"))
+    names.append(input("City:\n"))
+    names.append(input("Country:\n"))
+    names.append(input("Favourite color:\n"))
     print("Enter all other keywords (Parents, friends, hobbies, passions): ")
     while True:
-        inp = input()
-        if inp == '':
+        val_input = input()
+        if val_input == '':
             break
-        names.append(inp)
+        names.append(val_input)
     while ('' in names):
         names.remove('')
 
 
-def permute(inp):
-    n = len(inp)
+def permute(val_input):
+    n = len(val_input)
 
     mx = 1 << n
 
-    inp = inp.lower()
+    val_input = val_input.lower()
 
     for i in range(mx):
-        combination = [k for k in inp]
+        combo = [k for k in val_input]
         for j in range(n):
             if (((i >> j) & 1) == 1):
-                combination[j] = inp[j].upper()
+                combo[j] = val_input[j].upper()
 
         temp = ""
-        for i in combination:
+        for i in combo:
             temp += i
         temp_names.append(temp)
 
 
-def generateList(list):
+def make_list(list):
     for word in names:
         for i in range(0, len(word) + 1):
             list.append(word[:i] + day + word[i:])
@@ -82,20 +70,20 @@ def generateList(list):
             list.append(word[:i] + year + word[i:])
             if len(year) == 4:
                 list.append(word[:i] + year[2:] + word[i:])
-            list.append(word[:i] + phoneNumber + word[i:])
-    if not phoneNumber == '':
-        list.append(phoneNumber)
+            list.append(word[:i] + phone_number + word[i:])
+    if not phone_number == '':
+        list.append(phone_number)
 
 
-def fileCreate(list):
+def make_file(list):
     with open('output.txt', 'w') as f:
         for item in list:
             f.write("%s\n" % item)
 
 
-importantWords()
+imp_info()
 for i in names:
     permute(i)
 names = names + temp_names
-generateList(list)
-fileCreate(list)
+make_list(list)
+make_file(list)
