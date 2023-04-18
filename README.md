@@ -24,7 +24,7 @@ Running this project doesn't require any additional packages.
 
 Start the software using:
 
-> $python main.py
+> $ python main.py
 
 The password list will be created and saved as "output.txt" in the same folder as the application.
 
