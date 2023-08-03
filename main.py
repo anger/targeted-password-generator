@@ -1,5 +1,6 @@
 print("""inp
 Targeted Password Generator
+github.com/anger
 
 Please answer all questions provided the best you can. If you do not know the answer, or are unsure, please press enter. DOB is a required input.
 """)
