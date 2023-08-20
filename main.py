@@ -35,11 +35,13 @@ def imp_info():
     names.append(input("Country:\n"))
     names.append(input("Favourite color:\n"))
     print("Enter all other keywords (Parents, friends, hobbies, passions): ")
+
     while True:
         val_input = input()
         if val_input == '':
             break
         names.append(val_input)
+        
     while ('' in names):
         names.remove('')
 
